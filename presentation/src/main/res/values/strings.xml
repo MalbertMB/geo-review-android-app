@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CagaUB</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="location_permission_denied">Permission denied</string>
+    <string name="permission_required_toast">"Permission required "</string>
+    <string name="permission_rationale_location">Permission rationale\n</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="benvingut">Com utilitzar CagaUB?</string>
+    <string name="infoMessage1">Primer, registra’t per poder afegir lavabos.</string>
+    <string name="infoMessage2">Un cop hagis fet el registre, fes login per accedir.</string>
+    <string name="infoMessage3">Fes clic al marcador blau i, allà on cliquis, s’afegirà un lavabo nou.</string>
+    <string name="button">Tancar</string>
+</resources>

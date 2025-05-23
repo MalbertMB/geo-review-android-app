@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/toiletNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toilet Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valora la teva experiència:"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="0"
+        android:layout_marginBottom="15dp"
+        android:isIndicator="false" />
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Deixa un comentari..."
+        android:gravity="top"
+        android:padding="12dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:background="@drawable/custom_enter_info"
+        android:layout_marginBottom="24dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puja una imatge ! "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cloud_upload_24px"
+        android:contentDescription="Imatge seleccionada" />
+
+    <!--Set color blue -->
+    <Button
+        android:id="@+id/btnUploadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pujar Imatge"
+        android:layout_marginTop="-15dp" />
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Valora"/>
+
+</LinearLayout>

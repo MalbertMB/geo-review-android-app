@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="SmallRatingBar" parent="@android:style/Widget.Material.RatingBar.Indicator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleX">0.5</item>
+        <item name="android:scaleY">0.5</item>
+
+        <item name="android:backgroundTint">#CCCCCC</item> <!-- Gray color for unfilled stars -->
+        <item name="android:progressTint">#FFD700</item> <!-- Gold for filled stars -->
+        <item name="android:secondaryProgressTint">#FFD700</item> <!-- Gold for half-filled stars -->
+    </style>
+
+
+
+
+    <style name="RoundedImageStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item> <!-- Adjust as needed -->
+    </style>
+
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/cacas_valoracio</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+
+
+</resources>

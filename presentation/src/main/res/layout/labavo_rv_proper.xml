@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:layout_marginTop="12dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginHorizontal="8dp">
+
+    <!--400dp son tota la pantalla width-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- 🟩 Section 1: Toilet Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:maxWidth="375dp">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toilet Name"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="#1A1A1A"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="-5dp" />
+
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <!-- Rating Value -->
+                <TextView
+                    android:id="@+id/txtRatingValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#222222"
+                    android:layout_marginEnd="-35dp" />
+
+                <!-- Rating Bar -->
+                <RatingBar
+                    android:id="@+id/LavaboRating"
+                    style="@style/CustomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_vertical"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:layout_marginLeft="-10dp"
+                    android:stepSize="0.5"
+                    android:scaleX="0.55"
+                    android:scaleY="0.55" />
+
+
+                <!-- Rating Count -->
+                <TextView
+                    android:id="@+id/txtRatingCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(0)"
+                    android:textSize="13sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#666666"
+                    android:layout_marginStart="-45dp" />
+            </LinearLayout>
+
+            <!-- Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/LavaboImg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wc_pd"
+                app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/LavaboDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modern, net i ben equipat. Amb dutxa i assecador. Accessible per a persones amb mobilitat reduïda."
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"
+                android:justificationMode="inter_word"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/LavaboCaracteristicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Característiques:"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"
+                android:justificationMode="inter_word"
+                android:layout_marginBottom="-2dp" />
+
+
+            <LinearLayout
+                android:id="@+id/icon_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="4dp"
+                android:padding="8dp">
+
+                <!-- Example icons. Visibility can be set dynamically in code -->
+                <ImageView
+                    android:id="@+id/icon_men"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_men"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_women"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_women"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_unisex"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_unisex"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_accessible"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_accessible"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_not_free"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_payment"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_free"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_not_payment"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon_baby"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_baby"
+                    android:visibility="visible"
+                    android:layout_gravity="left"
+                    android:layout_marginEnd="8dp" />
+
+            </LinearLayout>
+
+            <!-- Button -->
+
+            <TextView
+                android:id="@+id/distancia"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Distància: N/A" />
+
+        </LinearLayout>
+
+
+        <!-- ▬▬▬ Separator ▬▬▬ -->
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

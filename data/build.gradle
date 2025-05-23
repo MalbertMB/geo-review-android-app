@@ -1,0 +1,46 @@
+plugins {
+    alias(libs.plugins.android.library)
+}
+
+android {
+    namespace 'edu.ub.data'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 26
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.firebase.firestore
+    implementation libs.databinding.common
+    implementation libs.play.services.cast.tv
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation project(':domain')
+    implementation project(':features')
+    implementation 'org.modelmapper:modelmapper:2.4.4'
+    implementation 'com.cloudinary:cloudinary-android:2.3.1'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.8'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+
+
+}

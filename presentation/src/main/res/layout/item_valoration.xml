@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    android:layout_marginHorizontal="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top">
+
+            <!-- User Photo -->
+            <ImageView
+                android:id="@+id/imgUserPhoto"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@drawable/circle_photo_user"
+                android:clipToOutline="true"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- User Name -->
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#222222"/>
+
+                    <!-- Total number of valorations made by the user
+
+                    <TextView
+                        android:id="@+id/txtTotalValorations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" · 10 valoracions"
+                        android:textSize="12sp"
+                        android:textColor="#555555"
+                        android:layout_marginStart="4dp"/>-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Rating -->
+                    <RatingBar
+                        android:id="@+id/LavaboRating"
+                        style="@style/CustomRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="-10dp"
+                        android:scaleX="0.4"
+                        android:scaleY="0.4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nomLavabo"
+                        android:rating="5"
+                        android:layout_marginStart="-70dp"
+                        android:layout_marginEnd="-60dp"
+                        />
+
+                    <!-- Number of weeks old -->
+                    <TextView
+                        android:id="@+id/txtWeeksOld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="0dp"
+                        android:background="@drawable/rounded_text_background"
+                        android:text=" Fa 2 setmanes "
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Comment -->
+        <TextView
+            android:id="@+id/txtUserComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lavabo molt net i ben cuidat. Es dificil trobar un lavabo així. Molt recomanable."
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <!-- Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/LavaboImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wc_pd"
+            app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

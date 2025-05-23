@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCardView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@null"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp">
+            <ImageView
+                android:id="@+id/LavaboImg"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginHorizontal="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_not_ava"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_editor_absoluteY="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/nomLavabo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lavabo"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="9dp"
+                app:layout_constraintTop_toBottomOf="@id/LavaboImg"
+                />
+
+            <RatingBar
+                android:id="@+id/LavaboRating"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginTop="3dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nomLavabo"
+                android:rating="5"
+                android:layout_marginStart="-70dp" />
+
+            <TextView
+                android:id="@+id/LavaboDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="9dp"
+                android:text="Descricpio tope de llarga la que te cuento manin loco lolololololl"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/LavaboRating"/>
+
+            <Button
+                android:id="@+id/goToButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mostrar lavabo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/LavaboDesc"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
