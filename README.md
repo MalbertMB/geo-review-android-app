@@ -1,43 +1,79 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/flg1PHQO)
-# 🌐 CagaUB
+# CagaUB
 
-CagaUB és una aplicació android desenvolupada per a l'assignatura de Projecte Integrat de Software (PIS) de la Universitat de Barcelona.
+CagaUB is an Android application developed for the Integrated Software Project (PIS) course at the University of Barcelona.
 
-Aquesta aplicació està dissenyada per poder trobar el millor lavabo segons les valoracions i la distància amb un mapa interactiu.
+This application is designed to help users find the best restroom based on ratings and distance using an interactive map.
 
-Anar al lavabo mai havia estat tan fàcil, uneix-te a la comunitat de caganers!
+Going to the bathroom has never been easier — join the CagaUB community.
 
 ---
 
-## 📸 Demo
+## Demo
 
 ![Demo](demoImg.png)
 
 ---
 
-## 🚀 Característiques
+## Features
 
-Amb CagaUB, podràs:
+With CagaUB, you can:
 
-- Afegir els lavabos que volguis.
-- Escriure ressenyes i penjar fotos.
-- Rebre recomanacions segons la teva ubicació.
-
----
-
-## 🛠️ Tecnologies utilizades
-
-- Frontend: `AndroidXML`, `Java`
-- Backend: `Java`, `Firebase`
-- API's: `GoogleMapsAPI`, `Firebase`, `Cloudinary`
+- Add new restrooms.
+- Write reviews and upload photos.
+- Receive recommendations based on your location.
 
 ---
 
-## 🧪 Com instal·lar i correr el projecte localment
+## Technologies Used
+
+- **Frontend:** `Android XML`, `Java`
+- **Backend:** `Java`, `Firebase`
+- **APIs:** `Google Maps API`, `Firebase`, `Cloudinary`
+
+---
+
+## How to Install and Run the Project Locally
+
+### 1. Clone the Repository
 
 ```bash
-# Clona el repositorio
-https://github.com/ProjecteIntegratDeSoftware-24-25/projecte-antoniu-co.git
+git clone https://github.com/ProjecteIntegratDeSoftware-24-25/projecte-antoniu-co.git
+cd projecte-antoniu-co
+```
 
-# Entra al directorio
-cd el-teu-projecte
+### 2. Open the Project in Android Studio
+
+1. Open **Android Studio**.
+2. Click on **"Open"** (or *File > Open*).
+3. Select the cloned project folder.
+4. Wait for **Gradle sync** to complete.
+
+### 3. Configure Required Services
+
+- Ensure you have a valid `google_maps_api.xml` file with your **Google Maps API key**.
+- Add the `google-services.json` file in the `/app` directory if Firebase is required.
+- Make sure Firebase is properly configured in the Firebase Console.
+
+### 4. Set Up an Emulator or Physical Device
+
+- Open **Device Manager** in Android Studio.
+- Create a new **Virtual Device (AVD)** with a supported Android version  
+  **or**
+- Connect a physical Android device with **USB debugging enabled**.
+
+### 5. Build and Run the Application
+
+1. Select the desired device (emulator or physical device).
+2. Click the **Run** button.
+3. Wait for the build process to complete.
+4. The application will automatically install and launch on the selected device.
+
+---
+
+## Collaborators
+
+- [Albert Marín Blasco](https://github.com/MalbertMB)
+- [David Rosal Castel](https://github.com/Hidibeis)
+- [Pau Romero Safont](https://github.com/Prspau)
+- [Martí Vila Rebellón](https://github.com/MartiVila)
+- [Martí Lázaro Bagué](https://github.com/sudo-Itramplay)
